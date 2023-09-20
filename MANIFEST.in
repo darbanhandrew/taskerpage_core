@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include taskerpage_core *.css
+recursive-include taskerpage_core *.csv
+recursive-include taskerpage_core *.html
+recursive-include taskerpage_core *.ico
+recursive-include taskerpage_core *.js
+recursive-include taskerpage_core *.json
+recursive-include taskerpage_core *.md
+recursive-include taskerpage_core *.png
+recursive-include taskerpage_core *.py
+recursive-include taskerpage_core *.svg
+recursive-include taskerpage_core *.txt
+recursive-exclude taskerpage_core *.pyc
