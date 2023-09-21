@@ -1,0 +1,376 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{#}",
+ "creation": "2023-09-10 17:37:40.627535",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_tab",
+  "title",
+  "first_name",
+  "column_break_g2hgf",
+  "account_type",
+  "last_name",
+  "section_break_iciz4",
+  "date_of_birth",
+  "column_break_0wj3e",
+  "gender",
+  "section_break_ipoue",
+  "describtion",
+  "banner",
+  "column_break_umsuc",
+  "user",
+  "customer",
+  "is_subscribed",
+  "subscription",
+  "role_profile_name",
+  "role",
+  "review_rates_section",
+  "review_average",
+  "column_break_4lzvt",
+  "review_count",
+  "identification_details_tab",
+  "phone_number",
+  "phone_verified",
+  "email_verification_code",
+  "email_verified",
+  "identified",
+  "is_in_wall",
+  "experience_segment_tab",
+  "years_of_experience",
+  "insurance",
+  "drivers_license",
+  "avatar",
+  "geographic_segment_tab",
+  "city",
+  "country",
+  "language",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Customer Details "
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Select",
+   "label": "Title",
+   "options": "MR\nMRS\nMX"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "column_break_g2hgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "label": "Account Type",
+   "options": "private\ncompany"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "section_break_iciz4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "column_break_0wj3e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nDoesn't matter"
+  },
+  {
+   "fieldname": "section_break_ipoue",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "describtion",
+   "fieldtype": "Data",
+   "label": "Describtion"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Attach Image",
+   "label": "Banner"
+  },
+  {
+   "fieldname": "column_break_umsuc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User",
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_subscribed",
+   "fieldtype": "Check",
+   "label": "Is Subscribed"
+  },
+  {
+   "fieldname": "subscription",
+   "fieldtype": "Link",
+   "label": "Subscription",
+   "options": "Subscription"
+  },
+  {
+   "fieldname": "role_profile_name",
+   "fieldtype": "Select",
+   "label": "Customer Role",
+   "options": "Tasker\nPoster"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Role",
+   "options": "Tasker\nPoster"
+  },
+  {
+   "fieldname": "review_rates_section",
+   "fieldtype": "Section Break",
+   "label": "Review Rates"
+  },
+  {
+   "fieldname": "review_average",
+   "fieldtype": "Rating",
+   "label": "Review Average"
+  },
+  {
+   "fieldname": "column_break_4lzvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "review_count",
+   "fieldtype": "Int",
+   "label": "Review Count"
+  },
+  {
+   "fieldname": "identification_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Identification Details"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "default": "0",
+   "fieldname": "phone_verified",
+   "fieldtype": "Check",
+   "label": "Phone Verified"
+  },
+  {
+   "fieldname": "email_verification_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "email_verification_code",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "email_verified",
+   "fieldtype": "Check",
+   "label": "Email Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "identified",
+   "fieldtype": "Check",
+   "label": "Identified"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_in_wall",
+   "fieldtype": "Check",
+   "label": "Appear in wall"
+  },
+  {
+   "fieldname": "experience_segment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Experience Segment"
+  },
+  {
+   "fieldname": "years_of_experience",
+   "fieldtype": "Int",
+   "label": "Years of experience"
+  },
+  {
+   "default": "0",
+   "fieldname": "insurance",
+   "fieldtype": "Check",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "drivers_license",
+   "fieldtype": "Data",
+   "label": "Driver\u2018s license"
+  },
+  {
+   "fieldname": "avatar",
+   "fieldtype": "Attach Image",
+   "label": "Avatar"
+  },
+  {
+   "fieldname": "geographic_segment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Geographic Segment"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  }
+ ],
+ "image_field": "avatar",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Customer Data",
+   "link_doctype": "Customer Address",
+   "link_fieldname": "customer_profile"
+  },
+  {
+   "group": "Customer Data",
+   "link_doctype": "Customer Profile Skills",
+   "link_fieldname": "customer_profile"
+  },
+  {
+   "group": "Task",
+   "link_doctype": "Customer Task",
+   "link_fieldname": "poster",
+   "table_fieldname": "Customer Tasks"
+  },
+  {
+   "group": "Negotiations",
+   "link_doctype": "Customer Bid",
+   "link_fieldname": "bider",
+   "table_fieldname": "Customer Bids"
+  },
+  {
+   "group": "Negotiations",
+   "link_doctype": "Customer Bid",
+   "link_fieldname": "poster",
+   "table_fieldname": "Poster Task Bids"
+  },
+  {
+   "group": "Negotiations",
+   "link_doctype": "Customer Appointment",
+   "link_fieldname": "poster",
+   "table_fieldname": "Customer Appointments as Poster"
+  },
+  {
+   "group": "Negotiations",
+   "link_doctype": "Customer Appointment",
+   "link_fieldname": "tasker",
+   "table_fieldname": "Customer Appointments as tasker"
+  },
+  {
+   "group": "Reviews",
+   "link_doctype": "Customer Review",
+   "link_fieldname": "reviewed_by",
+   "table_fieldname": "Reviewed By Customer"
+  },
+  {
+   "group": "Reviews",
+   "link_doctype": "Customer Review",
+   "link_fieldname": "reviewed_on",
+   "table_fieldname": "Reviews on customer"
+  },
+  {
+   "group": "Edication",
+   "link_doctype": "Customer Education",
+   "link_fieldname": "customer_profile"
+  }
+ ],
+ "make_attachments_public": 1,
+ "max_attachments": 2,
+ "modified": "2023-09-21 02:03:19.671221",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Profile",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "first_name,last_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

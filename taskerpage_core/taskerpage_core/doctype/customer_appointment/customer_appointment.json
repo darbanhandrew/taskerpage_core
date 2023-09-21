@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-17 06:22:47.040280",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment_type",
+  "meeting_link",
+  "appointment_location_lat",
+  "appointment_location_lng",
+  "is_tasker_accepted",
+  "is_poster_accepted",
+  "appointment_time",
+  "tasker",
+  "poster",
+  "post",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Select",
+   "label": "Appointment Type",
+   "options": "Online\nBy Phone\nOn-Site"
+  },
+  {
+   "fieldname": "meeting_link",
+   "fieldtype": "Data",
+   "label": "Meeting Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "appointment_location_lat",
+   "fieldtype": "Data",
+   "label": "Appointment Location Lat"
+  },
+  {
+   "fieldname": "appointment_location_lng",
+   "fieldtype": "Data",
+   "label": "Appointment Location Lng"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_tasker_accepted",
+   "fieldtype": "Check",
+   "label": "Is Tasker Accepted"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_poster_accepted",
+   "fieldtype": "Check",
+   "label": "Is Poster Accepted"
+  },
+  {
+   "fieldname": "appointment_time",
+   "fieldtype": "Datetime",
+   "label": "Appointment Time"
+  },
+  {
+   "fieldname": "tasker",
+   "fieldtype": "Link",
+   "label": "Tasker",
+   "options": "Customer Profile"
+  },
+  {
+   "fieldname": "poster",
+   "fieldtype": "Link",
+   "label": "Poster",
+   "options": "Customer Profile"
+  },
+  {
+   "fieldname": "post",
+   "fieldtype": "Link",
+   "label": "Post ",
+   "options": "Customer Task"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Appointment",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 02:03:19.365981",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Appointment",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

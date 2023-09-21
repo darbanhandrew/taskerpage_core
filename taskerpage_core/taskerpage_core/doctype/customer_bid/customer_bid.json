@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-16 00:06:17.900434",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "price",
+  "price_type",
+  "bider",
+  "post",
+  "poster",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "price_type",
+   "fieldtype": "Select",
+   "label": "Price Type",
+   "options": "Per hour\nPer Session\nTotal"
+  },
+  {
+   "fieldname": "bider",
+   "fieldtype": "Link",
+   "label": "Bider",
+   "options": "Customer Profile"
+  },
+  {
+   "fieldname": "post",
+   "fieldtype": "Link",
+   "label": "Post",
+   "options": "Customer Task"
+  },
+  {
+   "fieldname": "poster",
+   "fieldtype": "Link",
+   "label": "Poster",
+   "options": "Customer Profile"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Bid",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 02:03:18.081244",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Bid",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

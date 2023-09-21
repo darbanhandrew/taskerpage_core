@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{coupon_name}",
+ "creation": "2023-09-16 11:46:08.396155",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "currency",
+  "duration",
+  "coupon_name",
+  "stripe_id",
+  "amount_off",
+  "percent_off",
+  "type_of_discount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "label": "Duration",
+   "options": "Once\nRepeating\nForever"
+  },
+  {
+   "fieldname": "coupon_name",
+   "fieldtype": "Data",
+   "label": "name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "stripe_id",
+   "fieldtype": "Data",
+   "label": "Stripe Id"
+  },
+  {
+   "fieldname": "amount_off",
+   "fieldtype": "Currency",
+   "label": "Amount Off",
+   "options": "currency"
+  },
+  {
+   "fieldname": "percent_off",
+   "fieldtype": "Data",
+   "label": "Percent Off"
+  },
+  {
+   "fieldname": "type_of_discount",
+   "fieldtype": "Select",
+   "label": "Type Of Discount",
+   "options": "Amount\nPercent"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subscription Coupon",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 02:03:18.336740",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Subscription Coupon",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

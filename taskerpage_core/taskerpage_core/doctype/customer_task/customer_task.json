@@ -1,0 +1,325 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-13 09:34:17.766994",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_information_tab",
+  "poster",
+  "skill_name",
+  "skill_category_name",
+  "skill_level",
+  "language",
+  "description",
+  "file",
+  "address_details_tab",
+  "address",
+  "full_address",
+  "latitude",
+  "longitude",
+  "country",
+  "city",
+  "schedule_information_tab",
+  "start_date",
+  "is_exact_start_time",
+  "start_time",
+  "start_range_time",
+  "number_of_hours_per_session",
+  "is_repeatable",
+  "repeat_type",
+  "end_date_type",
+  "end_on",
+  "end_after_number_of_sessions",
+  "repeat_every",
+  "preferred_days",
+  "monthly_repeat_type",
+  "tasker_type_information_tab",
+  "tasker_gender",
+  "tasker_age_range",
+  "identified",
+  "years_of_experience",
+  "insurance",
+  "driver_license",
+  "max_distance",
+  "amended_from",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Task Information"
+  },
+  {
+   "fieldname": "poster",
+   "fieldtype": "Link",
+   "label": "Poster",
+   "options": "Customer Profile"
+  },
+  {
+   "fieldname": "skill_name",
+   "fieldtype": "Link",
+   "label": "Skill",
+   "options": "Skill"
+  },
+  {
+   "fieldname": "skill_category_name",
+   "fieldtype": "Link",
+   "label": "Skill Category",
+   "options": "Skill Category"
+  },
+  {
+   "fieldname": "skill_level",
+   "fieldtype": "Select",
+   "label": "Skill Level",
+   "options": "\nSelf trained\nEducated Professional\nExperienced Self-Trained"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "address_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Customer Address"
+  },
+  {
+   "fieldname": "full_address",
+   "fieldtype": "Data",
+   "label": "Full Address"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "longitude"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "schedule_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Schedule Information"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_exact_start_time",
+   "fieldtype": "Check",
+   "label": "Is Exact Start Time"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "start_range_time",
+   "fieldtype": "Select",
+   "label": "Start Range Time",
+   "options": "\nMorning (7:00-12:00)\nAfternoon (12:00-18:00)\nEvening (18:00-24:00)"
+  },
+  {
+   "fieldname": "number_of_hours_per_session",
+   "fieldtype": "Int",
+   "label": "Number Of Hours Per Session"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_repeatable",
+   "fieldtype": "Check",
+   "label": "Is Repeatable"
+  },
+  {
+   "depends_on": "eval:doc.is_repeatable == \"1\"",
+   "fieldname": "repeat_type",
+   "fieldtype": "Select",
+   "label": "Repeat Type",
+   "options": "\nDaily\nEvery Weekday (Mon-Fri)\nWeekly\nMonthly\nCustom"
+  },
+  {
+   "fieldname": "end_date_type",
+   "fieldtype": "Select",
+   "label": "End Date Type",
+   "options": "\nNever\nOn\nAfter"
+  },
+  {
+   "depends_on": "eval:doc.is_repeatable == \"1\"",
+   "fieldname": "end_on",
+   "fieldtype": "Date",
+   "label": "End On"
+  },
+  {
+   "fieldname": "end_after_number_of_sessions",
+   "fieldtype": "Int",
+   "label": "End After Number Of Sessions"
+  },
+  {
+   "fieldname": "repeat_every",
+   "fieldtype": "Data",
+   "label": "Repeat Every"
+  },
+  {
+   "fieldname": "preferred_days",
+   "fieldtype": "Data",
+   "label": "Preferred Days"
+  },
+  {
+   "fieldname": "monthly_repeat_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Monthly Repeat Type"
+  },
+  {
+   "fieldname": "tasker_type_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tasker Type Information"
+  },
+  {
+   "fieldname": "tasker_gender",
+   "fieldtype": "Select",
+   "label": "Tasker Gender",
+   "options": "\nMale\nFemale\nDoesn't matter"
+  },
+  {
+   "fieldname": "tasker_age_range",
+   "fieldtype": "Select",
+   "label": "Tasker Age Range",
+   "options": "\n<20\n20-40\n40>\nDoesn't matter"
+  },
+  {
+   "default": "0",
+   "fieldname": "identified",
+   "fieldtype": "Check",
+   "label": "Identified"
+  },
+  {
+   "fieldname": "years_of_experience",
+   "fieldtype": "Int",
+   "label": "Years Of Experience"
+  },
+  {
+   "default": "0",
+   "fieldname": "insurance",
+   "fieldtype": "Check",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "driver_license",
+   "fieldtype": "Select",
+   "label": "Driver's License",
+   "options": "\nCar\nTruck"
+  },
+  {
+   "fieldname": "max_distance",
+   "fieldtype": "Data",
+   "label": "Max Distance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Task",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "workflow_state"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 01:59:45.383108",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Task",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}
