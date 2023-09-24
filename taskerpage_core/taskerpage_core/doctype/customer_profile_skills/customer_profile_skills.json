@@ -44,6 +44,7 @@
    "options": "Customer Profile"
   },
   {
+   "fetch_from": "skill_category_name.icon",
    "fieldname": "icon",
    "fieldtype": "Attach Image",
    "label": "icon"
@@ -57,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 02:03:18.931102",
+ "modified": "2023-09-23 00:54:52.257472",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Profile Skills",

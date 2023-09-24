@@ -15,7 +15,8 @@
   "amount_off",
   "percent_off",
   "type_of_discount",
-  "amended_from"
+  "amended_from",
+  "targeted_tags"
  ],
  "fields": [
   {
@@ -66,12 +67,18 @@
    "options": "Subscription Coupon",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "targeted_tags",
+   "fieldtype": "Table MultiSelect",
+   "label": "Targeted Tags",
+   "options": "Targeted Tags"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 02:03:18.336740",
+ "modified": "2023-09-23 01:48:40.827792",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Subscription Coupon",
@@ -104,6 +111,7 @@
    "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

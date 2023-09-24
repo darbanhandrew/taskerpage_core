@@ -12,7 +12,9 @@
   "bider",
   "post",
   "poster",
-  "amended_from"
+  "amended_from",
+  "bider_user",
+  "poster_user"
  ],
  "fields": [
   {
@@ -52,12 +54,25 @@
    "options": "Customer Bid",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "bider_user",
+   "fieldtype": "Link",
+   "label": "Bider User",
+   "options": "User"
+  },
+  {
+   "fetch_from": "poster.user",
+   "fieldname": "poster_user",
+   "fieldtype": "Link",
+   "label": "Poster User",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 02:03:18.081244",
+ "modified": "2023-09-23 00:43:07.068248",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Bid",

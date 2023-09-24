@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
  "autoname": "autoincrement",
  "creation": "2023-09-17 06:22:47.040280",
  "default_view": "List",
@@ -17,7 +18,12 @@
   "tasker",
   "poster",
   "post",
-  "amended_from"
+  "amended_from",
+  "tasker_user",
+  "poster_user",
+  "appointment_start_time",
+  "appointment_end_time",
+  "geolocation"
  ],
  "fields": [
   {
@@ -56,8 +62,8 @@
   },
   {
    "fieldname": "appointment_time",
-   "fieldtype": "Datetime",
-   "label": "Appointment Time"
+   "fieldtype": "Date",
+   "label": "Appointment Date"
   },
   {
    "fieldname": "tasker",
@@ -85,12 +91,44 @@
    "options": "Customer Appointment",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "tasker.user",
+   "fieldname": "tasker_user",
+   "fieldtype": "Link",
+   "label": "Tasker User",
+   "options": "User"
+  },
+  {
+   "fetch_from": "poster.user",
+   "fieldname": "poster_user",
+   "fieldtype": "Link",
+   "label": "Poster User",
+   "options": "User"
+  },
+  {
+   "fieldname": "appointment_start_time",
+   "fieldtype": "Time",
+   "label": "Appointment Start Time"
+  },
+  {
+   "fieldname": "appointment_end_time",
+   "fieldtype": "Time",
+   "label": "Appointment End Time"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "is_virtual": 1,
+   "label": "Geolocation",
+   "options": "'{{\"type\":\"Feature\",\"properties\":{{}},\"geometry\":{{\"type\":\"Point\",\"coordinates\":[{},{}]}}}}'.format(doc.appointment_location_lat, doc.appointment_location_lng) if latitude is not None and longitude is not None else '{\"type\":\"FeatureCollection\",\"features\":[]}'"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 02:03:19.365981",
+ "make_attachments_public": 1,
+ "modified": "2023-09-24 23:44:49.712733",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Appointment",

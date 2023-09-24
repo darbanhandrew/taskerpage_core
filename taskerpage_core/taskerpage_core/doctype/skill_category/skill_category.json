@@ -49,10 +49,9 @@
    "read_only": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 02:03:20.212268",
+ "modified": "2023-09-21 10:51:54.404752",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Skill Category",
@@ -74,17 +73,6 @@
   {
    "email": 1,
    "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "End User",
-   "select": 1,
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "permlevel": 1,
    "print": 1,
    "read": 1,
    "report": 1,
