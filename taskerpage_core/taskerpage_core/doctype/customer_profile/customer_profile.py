@@ -7,5 +7,5 @@ import json
 class CustomerProfile(Document):
 	@property
 	def map_view(self):
-		geojson = {"type": "Feature", "properties": {}, "geometry": {"type": "Point", "coordinates": [self.appointment_location_lat, self.appointment_location_lng]}} if self.appointment_location_lat is not None and self.appointment_location_lng is not None else {"type": "FeatureCollection", "features": []}
+		geojson = {"type": "Feature", "properties": {}, "geometry": {"type": "Point", "coordinates": [self.latitude, self.longitude]}} if self.longitude is not None and self.longitude is not None else {"type": "FeatureCollection", "features": []}
 		return json.dumps(geojson)
