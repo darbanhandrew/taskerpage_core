@@ -12,6 +12,7 @@
   "skill_name",
   "skill_category_name",
   "skill_level",
+  "options",
   "language",
   "description",
   "file",
@@ -45,7 +46,10 @@
   "driver_license",
   "max_distance",
   "amended_from",
-  "workflow_state"
+  "workflow_state",
+  "is_online",
+  "poster_user",
+  "map_view"
  ],
  "fields": [
   {
@@ -265,12 +269,38 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "workflow_state"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Table",
+   "label": "Options",
+   "options": "Customer Task Skill Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_online",
+   "fieldtype": "Check",
+   "label": "is Online"
+  },
+  {
+   "fetch_from": "poster.user",
+   "fieldname": "poster_user",
+   "fieldtype": "Link",
+   "label": "Poster User",
+   "options": "User"
+  },
+  {
+   "fieldname": "map_view",
+   "fieldtype": "Geolocation",
+   "is_virtual": 1,
+   "label": "Map View",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 01:59:45.383108",
+ "modified": "2023-09-25 03:40:10.858476",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Task",
@@ -317,6 +347,8 @@
    "write": 1
   }
  ],
+ "search_fields": "skill_name, skill_category_name",
+ "show_preview_popup": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
