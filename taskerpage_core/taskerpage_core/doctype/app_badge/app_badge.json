@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{label}",
+ "creation": "2023-10-27 17:29:01.605619",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "active_icon",
+  "deactive_icon",
+  "completion_percent",
+  "badge_conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "options": "Name"
+  },
+  {
+   "fieldname": "active_icon",
+   "fieldtype": "Attach Image",
+   "label": "Active Icon"
+  },
+  {
+   "fieldname": "deactive_icon",
+   "fieldtype": "Attach Image",
+   "label": "Deactive Icon"
+  },
+  {
+   "fieldname": "completion_percent",
+   "fieldtype": "Int",
+   "label": "Completion Percent"
+  },
+  {
+   "fieldname": "badge_conditions",
+   "fieldtype": "Table",
+   "label": "Badge Conditions",
+   "options": "App Badge Conditions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-27 18:01:48.100366",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "App Badge",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

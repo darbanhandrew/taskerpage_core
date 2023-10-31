@@ -8,6 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "appointment_schedule_section",
   "appointment_type",
   "meeting_link",
   "appointment_location_lat",
@@ -23,7 +24,9 @@
   "poster_user",
   "appointment_start_time",
   "appointment_end_time",
-  "geolocation"
+  "geolocation",
+  "tasker_chat_bot",
+  "poster_chat_bot"
  ],
  "fields": [
   {
@@ -122,13 +125,32 @@
    "is_virtual": 1,
    "label": "Geolocation",
    "read_only": 1
+  },
+  {
+   "fieldname": "appointment_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "appointment schedule"
+  },
+  {
+   "fetch_from": "tasker_user.chat_bot",
+   "fieldname": "tasker_chat_bot",
+   "fieldtype": "Link",
+   "label": "Tasker Chat Bot",
+   "options": "Chat Bot"
+  },
+  {
+   "fetch_from": "poster_user.chat_bot",
+   "fieldname": "poster_chat_bot",
+   "fieldtype": "Link",
+   "label": "Poster Chat Bot",
+   "options": "Chat Bot"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2023-09-25 00:07:44.040103",
+ "modified": "2023-10-14 08:54:50.302167",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Appointment",

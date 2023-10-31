@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "customer_details_tab",
+  "company_name",
   "title",
   "first_name",
   "column_break_g2hgf",
@@ -35,6 +36,7 @@
   "identification_details_tab",
   "phone_number",
   "phone_verified",
+  "personal_details_completed",
   "email_verification_code",
   "email_verified",
   "identified",
@@ -50,7 +52,9 @@
   "language",
   "latitude",
   "longitude",
-  "map_view"
+  "map_view",
+  "badges",
+  "searchingfullname"
  ],
  "fields": [
   {
@@ -156,16 +160,16 @@
   },
   {
    "fieldname": "role_profile_name",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Customer Role",
-   "options": "Tasker\nPoster"
+   "options": "Role Profile"
   },
   {
    "fieldname": "role",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "hidden": 1,
    "label": "Role",
-   "options": "Tasker\nPoster"
+   "options": "Role Profile"
   },
   {
    "fieldname": "review_rates_section",
@@ -259,11 +263,13 @@
    "label": "Geographic Segment"
   },
   {
+   "default": "City",
    "fieldname": "city",
    "fieldtype": "Data",
    "label": "City"
   },
   {
+   "default": "Country",
    "fieldname": "country",
    "fieldtype": "Data",
    "label": "Country"
@@ -289,6 +295,32 @@
    "is_virtual": 1,
    "label": "Map View",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.account_type=='company'",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name",
+   "options": "Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "personal_details_completed",
+   "fieldtype": "Check",
+   "label": "Personal Details Completed"
+  },
+  {
+   "fieldname": "badges",
+   "fieldtype": "Table",
+   "label": "Badges",
+   "options": "Customer Profile Badge"
+  },
+  {
+   "fieldname": "searchingfullname",
+   "fieldtype": "Small Text",
+   "is_virtual": 1,
+   "label": "searchingfullname",
+   "options": "f\"{doc.first_name} {doc.last_name}\""
   }
  ],
  "image_field": "avatar",
@@ -297,11 +329,6 @@
   {
    "group": "Customer Data",
    "link_doctype": "Customer Address",
-   "link_fieldname": "customer_profile"
-  },
-  {
-   "group": "Customer Data",
-   "link_doctype": "Customer Profile Skills",
    "link_fieldname": "customer_profile"
   },
   {
@@ -353,8 +380,8 @@
   }
  ],
  "make_attachments_public": 1,
- "max_attachments": 2,
- "modified": "2023-09-25 09:16:05.085824",
+ "max_attachments": 1000,
+ "modified": "2023-10-30 17:21:33.709947",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Profile",
@@ -383,5 +410,6 @@
  "sort_order": "DESC",
  "states": [],
  "track_changes": 1,
- "track_seen": 1
+ "track_seen": 1,
+ "track_views": 1
 }

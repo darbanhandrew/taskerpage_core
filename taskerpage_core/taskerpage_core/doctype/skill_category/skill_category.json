@@ -11,7 +11,9 @@
   "icon",
   "description",
   "bagdes",
-  "amended_from"
+  "amended_from",
+  "skill_options",
+  "skills"
  ],
  "fields": [
   {
@@ -47,11 +49,24 @@
    "options": "Skill Category",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "skill_options",
+   "fieldtype": "Table",
+   "label": "Skill Options",
+   "options": "Skill Options"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Child Skill"
   }
  ],
+ "image_field": "icon",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 10:51:54.404752",
+ "modified": "2023-10-23 11:05:39.966994",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Skill Category",

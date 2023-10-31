@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "format:{customer_task}-{user}",
+ "creation": "2023-10-07 08:48:30.260039",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "status",
+  "customer_task",
+  "is_owner"
+ ],
+ "fields": [
+  {
+   "fetch_from": "customer_profile.user",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "customer_task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Customer Task",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_owner",
+   "fieldtype": "Check",
+   "label": "Is Owner"
+  }
+ ],
+ "links": [],
+ "modified": "2023-10-07 12:56:53.301248",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Task Taskers",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

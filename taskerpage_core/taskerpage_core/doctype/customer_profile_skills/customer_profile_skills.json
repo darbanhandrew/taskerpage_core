@@ -12,7 +12,8 @@
   "skill_level",
   "customer_profile",
   "icon",
-  "customer_skill_options"
+  "customer_skill_options",
+  "skills"
  ],
  "fields": [
   {
@@ -28,14 +29,13 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Skill",
-   "options": "Skill",
-   "reqd": 1
+   "options": "Skill"
   },
   {
    "fieldname": "skill_level",
    "fieldtype": "Select",
    "label": "Skill Level",
-   "options": "Educated Professional\nExperienced Self-Trained\nSelf trained"
+   "options": "\nEducated Professional\nExperienced Self-Trained\nSelf trained"
   },
   {
    "fieldname": "customer_profile",
@@ -54,11 +54,17 @@
    "fieldtype": "Table",
    "label": "Customer Skill Options",
    "options": "Customer Profile Skill Options"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Child Skill"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 00:54:52.257472",
+ "modified": "2023-10-25 22:07:55.636460",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Profile Skills",
@@ -83,23 +89,12 @@
    "delete": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "End User",
-   "select": 1,
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
-   "share": 1
   }
  ],
  "quick_entry": 1,

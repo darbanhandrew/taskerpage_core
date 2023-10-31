@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{first_name}-{last_name}-{customer_profile}-{##}",
+ "creation": "2023-10-26 14:20:35.884960",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_profile",
+  "customer_profile_type",
+  "title",
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "document_type",
+  "document_number",
+  "expiry_date",
+  "document_file",
+  "document_user_photo",
+  "status",
+  "amended_from",
+  "customer_profile_user"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_profile",
+   "fieldtype": "Link",
+   "label": "Customer Profile",
+   "options": "Customer Profile"
+  },
+  {
+   "fetch_from": "customer_profile.account_type",
+   "fieldname": "customer_profile_type",
+   "fieldtype": "Data",
+   "label": "Customer Profile Type"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Select",
+   "label": "Title",
+   "options": "Mr\nMrs"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Document Type",
+   "options": "National ID\nPassport\nResidence Permit\nDriver's License"
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Small Text",
+   "label": "Document Number"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "document_file",
+   "fieldtype": "Attach",
+   "label": "Document File"
+  },
+  {
+   "fieldname": "document_user_photo",
+   "fieldtype": "Attach Image",
+   "label": "Document User Photo"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Identification",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_profile.user",
+   "fieldname": "customer_profile_user",
+   "fieldtype": "Link",
+   "label": "Customer Profile User",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-26 19:26:00.568443",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "User Identification",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

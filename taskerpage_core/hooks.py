@@ -153,6 +153,12 @@ scheduler_events = {
         ]
     }
 }
+doc_events = {
+    "User": {
+        "before_insert": "taskerpage_core.taskerpage_core.events.user.assign_member_number"
+    }
+}
+
 # Testing
 # -------
 

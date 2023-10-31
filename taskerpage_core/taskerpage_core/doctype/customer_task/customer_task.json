@@ -37,6 +37,8 @@
   "repeat_every",
   "preferred_days",
   "monthly_repeat_type",
+  "days_per_week",
+  "hour_each_session",
   "tasker_type_information_tab",
   "tasker_gender",
   "tasker_age_range",
@@ -49,7 +51,12 @@
   "workflow_state",
   "is_online",
   "poster_user",
-  "map_view"
+  "map_view",
+  "chat_bot",
+  "rate_type",
+  "rate",
+  "rate_currency",
+  "rate_session_duration"
  ],
  "fields": [
   {
@@ -175,7 +182,7 @@
    "fieldname": "repeat_type",
    "fieldtype": "Select",
    "label": "Repeat Type",
-   "options": "\nDaily\nEvery Weekday (Mon-Fri)\nWeekly\nMonthly\nCustom"
+   "options": "\nExact Dates\nWeekly\nMountly"
   },
   {
    "fieldname": "end_date_type",
@@ -295,12 +302,52 @@
    "is_virtual": 1,
    "label": "Map View",
    "read_only": 1
+  },
+  {
+   "fetch_from": "poster_user.chat_bot",
+   "fieldname": "chat_bot",
+   "fieldtype": "Link",
+   "label": "Chat Bot",
+   "options": "Chat Bot"
+  },
+  {
+   "fieldname": "rate_type",
+   "fieldtype": "Select",
+   "label": "Rate Type",
+   "options": "Offer a rate\nOne package amount"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "rate"
+  },
+  {
+   "fieldname": "rate_currency",
+   "fieldtype": "Link",
+   "label": "Rate Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "rate_session_duration",
+   "fieldtype": "Select",
+   "label": "Rate Session Duration",
+   "options": "Per hour\nPer session\nTotal"
+  },
+  {
+   "fieldname": "days_per_week",
+   "fieldtype": "Int",
+   "label": "Days Per Week"
+  },
+  {
+   "fieldname": "hour_each_session",
+   "fieldtype": "Int",
+   "label": "Hour Each Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-25 03:40:10.858476",
+ "modified": "2023-10-20 13:58:09.549367",
  "modified_by": "Administrator",
  "module": "Taskerpage Core",
  "name": "Customer Task",

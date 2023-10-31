@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{customer_profile}-{label}-{###}",
+ "creation": "2023-10-27 14:07:04.569914",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "skill_categories",
+  "amount",
+  "currency",
+  "customer_profile",
+  "customer_profile_user",
+  "is_all"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "customer_profile",
+   "fieldtype": "Link",
+   "label": "Customer Profile",
+   "options": "Customer Profile"
+  },
+  {
+   "fetch_from": "customer_profile.user",
+   "fieldname": "customer_profile_user",
+   "fieldtype": "Link",
+   "label": "Customer Profile User",
+   "options": "User"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "options": "Name"
+  },
+  {
+   "fieldname": "skill_categories",
+   "fieldtype": "Table",
+   "label": "Skill Categories",
+   "options": "Child Skill Category"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_all",
+   "fieldtype": "Check",
+   "label": "Is All Categories"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-27 16:19:38.220460",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "User Rate",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "End User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

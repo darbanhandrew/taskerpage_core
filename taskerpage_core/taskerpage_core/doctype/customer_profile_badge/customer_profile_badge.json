@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{parenttype}-{parent}-{parentfield}-{badge_name}",
+ "creation": "2023-10-27 17:34:23.289286",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "badge_name",
+  "label",
+  "active_icon",
+  "deactive_icon",
+  "completed_percent",
+  "enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "badge_name",
+   "fieldtype": "Link",
+   "label": "Badge",
+   "options": "App Badge"
+  },
+  {
+   "fetch_from": "badge_name.active_icon",
+   "fieldname": "active_icon",
+   "fieldtype": "Attach Image",
+   "label": "Active Icon"
+  },
+  {
+   "fetch_from": "badge_name.deactive_icon",
+   "fieldname": "deactive_icon",
+   "fieldtype": "Attach Image",
+   "label": "Deactive Icon"
+  },
+  {
+   "fetch_from": "badge_name.completion_percent",
+   "fieldname": "completed_percent",
+   "fieldtype": "Int",
+   "label": "Completed Percent"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fetch_from": "badge_name.label",
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "options": "Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-27 17:43:09.709064",
+ "modified_by": "Administrator",
+ "module": "Taskerpage Core",
+ "name": "Customer Profile Badge",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
